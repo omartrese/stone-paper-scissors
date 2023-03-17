@@ -1,0 +1,55 @@
+body
+{
+  display: block;
+}
+
+#decision
+{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 4em;
+  font-size: 5em;
+  font-family: sans-serif;
+  transform: translateY(-3em);
+}
+
+
+.players
+{
+  display: flex;
+  align-items: center;
+  font-size: 5em;
+}
+#player
+{
+  justify-content: start;
+  margin-left: 6em;
+}
+#enemy
+{
+  justify-content: end;
+  margin-right: 6em;
+}
+
+
+
+#game-buttons
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(6em);
+}
+
+
+.elections
+{
+  width: 30em;
+  height: 30em;
+  text-align: center;
+  border-radius: 23em;
+  border-style: solid;
+  border-color: black;
+  margin-right: 5em;
+}
