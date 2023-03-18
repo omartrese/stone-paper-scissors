@@ -1,9 +1,11 @@
+
 body
 {
   display: block;
+  background-color: khaki;
 }
 
-#decision
+#result
 {
   display: flex;
   justify-content: center;
@@ -20,16 +22,25 @@ body
   display: flex;
   align-items: center;
   font-size: 5em;
+  transform: translateY(-2.5em);
 }
 #player
 {
   justify-content: start;
-  margin-left: 6em;
+  margin-left: 1.5em;
+  color: cornflowerblue;
+  font-weight: bolder;
+  font-family: sans-serif;
+  -webkit-text-stroke: 2px black;
 }
 #enemy
 {
   justify-content: end;
-  margin-right: 6em;
+  margin-right: 1.5em;
+  color: red;
+  font-weight: bolder;
+  font-family: sans-serif;
+  -webkit-text-stroke: 2px black;
 }
 
 
@@ -38,18 +49,34 @@ body
 {
   display: flex;
   justify-content: center;
+  align-items: center; 
+  transform: translateY(-11em);
+}
+
+#choose-button
+{
+  display: flex;
+  justify-content: center;
   align-items: center;
-  transform: translateY(6em);
+  width: 15em;
+  height: 20em;
+  margin-left: 1.5em;
+  border-radius: 20%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  transform: translateY(-33em);
 }
 
 
 .elections
 {
-  width: 30em;
-  height: 30em;
+  width: 20em;
+  height: 20em;
   text-align: center;
   border-radius: 23em;
   border-style: solid;
+  border-width: 3px;
   border-color: black;
-  margin-right: 5em;
+  margin-right: 2em;
 }
