@@ -45,6 +45,13 @@ addEventListener('DOMContentLoaded', () => {
       console.log("please choose one");
     }
 
+    if(isChecked)
+    {
+      currentDecision = "";
+      enemyDecision = "";
+      reset();
+    }
+
     randomDecision = Math.floor(Math.random() * 3);
     enemyDecision = enemyObjects[randomDecision];
     enemyText.innerText = enemyDecision + "  :Enemy";
@@ -52,7 +59,6 @@ addEventListener('DOMContentLoaded', () => {
     console.log("Enemy decision is: " + enemyDecision);
     console.log("Player decision is: " + currentDecision);
 
-    isChecked = true;
     check(currentDecision, enemyDecision);
 
   })
@@ -76,7 +82,7 @@ addEventListener('DOMContentLoaded', () => {
         if(enemyDecision === "Paper")
         {
           lose();
-        } 
+        } else if(enemyDecision !== playerDecision) win();
         break;
 
       case "Paper":
@@ -103,7 +109,7 @@ addEventListener('DOMContentLoaded', () => {
     resultText.style = "color:red";
     console.log("The winner is: anybody");
     console.log("they are the SAME, so there is a TIE");
-
+    isChecked = true;
   }
 
   function win() 
@@ -111,7 +117,7 @@ addEventListener('DOMContentLoaded', () => {
     console.log("the winner is: PLAYER");
     resultText.innerText = "The winner is PLAYER";
     resultText.style = "color:black";
-
+    isChecked = true;
   }
 
   function lose()
@@ -119,7 +125,7 @@ addEventListener('DOMContentLoaded', () => {
     console.log("the winner is: ENEMY :(");
     resultText.innerText = "The winner is ENEMY :(";
     resultText.style = "color:black";
-
+    isChecked = true;
   }
 
   function reset() 
